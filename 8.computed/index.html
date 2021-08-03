@@ -22,7 +22,25 @@
         <h1>Computed</h1>
         <p>Computed Poperty in vue.js</p>
       </div>
-      <!-- Two seperate feilds for names and adding this two using computed -->
+
+      <div class="d-flex mb-3">
+        <input
+          v-model="firstName"
+          type="text"
+          class="form-control mx-2"
+          placeholder="First Name"
+        />
+        <input
+          v-model="lastName"
+          type="text"
+          class="form-control mx-2"
+          placeholder="Last Name"
+        />
+      </div>
+
+      <p>First Name: {{firstName}}</p>
+      <p>Last Name: {{lastName}}</p>
+      <p>Full Name: {{fullName}}</p>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
