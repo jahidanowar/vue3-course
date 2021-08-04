@@ -5,6 +5,7 @@ const app = Vue.createApp({
       selectedHobbies: [],
     };
   },
+  computed: {},
   methods: {
     addHobby(hobby) {
       if (this.selectedHobbies.indexOf(hobby) !== -1) {
