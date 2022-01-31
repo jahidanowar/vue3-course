@@ -29,16 +29,26 @@ export default {
       cart: [],
     };
   },
+  beforeCreate() {
+    console.log("Before Create called");
+  },
+  created() {
+    console.log("Created called");
+  },
+  beforeMount() {
+    console.log("Before Mount called");
+  },
   mounted() {
-    axios
-      .get(`https://fakestoreapi.com/products`)
-      .then((res) => {
-        this.products = res.data;
-        console.log(res);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    // axios
+    //   .get(`https://fakestoreapi.com/products`)
+    //   .then((res) => {
+    //     this.products = res.data;
+    //     console.log(res);
+    //   })
+    //   .catch((e) => {
+    //     console.log(e);
+    //   });
+    console.log("mounted hook called");
   },
   methods: {
     addTocart(id) {
